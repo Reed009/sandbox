@@ -64,7 +64,7 @@ public class Comment {
       String sql = "DELETE FROM comments where id = ?";
       Connection con = Postgres.connection();
       PreparedStatement pStatement = con.prepareStatement(sql);
-      pStatement.setString(1, id);
+      pStatement.setString((1, id));
       return 1 == pStatement.executeUpdate();
     } catch(Exception e) {
       e.printStackTrace();
